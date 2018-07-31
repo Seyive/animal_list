@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	
+	<title>Animal List</title>
+	
+	<style>
+	body{
+		background-color: #f0f0f0
+	}
+	.center{
+		margin: auto;
+		width: 30%;
+
+	}
+		
+	div{
+		background-color: #ffffff;
+		width: 30px; 
+		padding: 25px;
+		border: 1px solid black;
+		margin: auto;
+
+	}
+
+		p{
+			font-family: Lucida Console;
+			font-size: 80%;
+		}
+
+		img {
+			float: center;
+			margin: 0 0 0 100px;
+			left width:150px;
+			height:200px;
+		}
+
+		h1{
+		
+			border:5px solid #3cb371 ;
+			text-align:center;
+			font-family: verdana; 
+			color:#000; 
+			padding: 10px;
+
+		}
+		
+		button {
+			background-color: #3cb371;
+			color: white;
+			padding: 3px;
+    		text-decoration: none;
+   			border-radius: 0px 0px 0 0;
+		}
+		 button:hover{
+		 	background-color: white;
+		 	color: #3cb371;
+		 } 
+</style>
+	<script type="text/javascript">
+		function favouriteAnimal(){
+		 
+				let favouriteAnimal = prompt("Type in your Favourite Animal");
+		
+		
+		
+				var animals = ['Sheep', 'Cat', 'Camel', 'Chicken', 'Chimpanzee','Pig','Rat','Cricket','Cow','Lion','Goat','DoG','Monkey','Donkey',];
+				
+				
+		        let favouriteAnimalToLowerCase = favouriteAnimal.toLowerCase();
+		        
+		        let animalsToLowerCase = animals.map(function(newAnimals){
+		        	
+		        	return newAnimals.toLowerCase();
+		        });
+			
+				if(animalsToLowerCase.includes(favouriteAnimalToLowerCase)){
+		
+				 alert ("Gotcha!!!" + " " + favouriteAnimal + " " + "is on our list");
+		
+				}else {
+		
+					alert ("Oh no!!!" + " " + favouriteAnimal + " " + "is not included. Try again");
+				}
+			}
+</script>
+		
+</head>
+
+<body>
+<div class="center">	
+<h1> Hello World</h1>
+	
+	<p>Welcome to Our</p>
+	
+
+	<img src="animal-kingdom-image.jpg" alt="Animal Kingdom">
+
+
+
+	<p> We promise you a beautiful experience with us.</p>
+
+<button onclick="favouriteAnimal()"> Click Here </button>
+
+</div>
+</body>
+</html>
